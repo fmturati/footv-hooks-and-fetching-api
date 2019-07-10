@@ -1,0 +1,103 @@
+:root {
+  --main-blue: #2d303a;
+  --secondary-blue: #446992;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Abel|Anton|Libre+Baskerville&display=swap");
+
+body,
+html,
+p,
+div {
+  font-family: "Abel", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+.App {
+  background: #fff;
+  background-position: bottom;
+}
+
+.container {
+  margin: auto;
+  padding: 10px;
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.main-title {
+  padding-top: 100px;
+  color: var(--main-blue);
+  text-align: center;
+}
+
+.zoom-element {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.zoom-element:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.center-elements {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  background: var(--main-blue);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px -1px 4px rgba(70, 70, 70, 0.29);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .container {
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

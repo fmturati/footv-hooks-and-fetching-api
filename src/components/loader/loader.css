@@ -1,0 +1,46 @@
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 5px solid #673e96;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  position: relative;
+  animation: spin 2s linear infinite forwards;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border-top: 2px solid inherit;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.loader::before {
+  top: 7px;
+  left: 7px;
+  width: 85px;
+  height: 85px;
+  border-top: 2px solid tomato;
+  animation: spin 2s linear infinite forwards;
+}
+
+.loader::after {
+  top: 16px;
+  left: 16px;
+  width: 80px;
+  height: 80px;
+  border-top: 2px solid yellowgreen;
+  animation: spin 1s linear infinite forwards;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
